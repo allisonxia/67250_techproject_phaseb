@@ -1,0 +1,307 @@
+/* Format the body text */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #011502;
+    color: #f5f5f7;
+    font-family: Roboto;
+    font-weight: 100;
+    line-height: 1.5;
+}
+
+/* Format the internal elements */
+main, header, footer, nav, section, article, p, h1, h2, h3, ul, li, img {
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Format leaflet attributes so it overrides the above */
+.leaflet-container,
+.leaflet-pane,
+.leaflet-tile,
+.leaflet-marker-icon,
+.leaflet-marker-shadow,
+.leaflet-tile-container,
+.leaflet-pane > * {
+    background: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* Format the MonoMuse header logo */
+#logo {
+  width: 18%;
+  display: block;
+}
+
+/* Format the urls */
+nav a {
+  text-decoration: none;
+  color: #f5f5f7;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 12px;
+}
+nav a:hover {
+  border-color: #32746D;
+  }
+
+.active {
+  color:#9EC5AB;    
+}
+
+/* Format the buy tickets button*/
+.cta {
+  color: #f5f5f7;
+  background-color: #104F55;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+/* Format the footer */
+footer {
+  border-top: 1px solid rgba(245,245,247,.12);
+  padding: 18px 16px;
+  text-align: center;
+  color: rgba(245,245,247,.72);
+  }
+
+/* Format the year in the footer*/
+#copyYear {
+  margin: 0;
+  padding: 0;
+  color: rgba(245,245,247,.72);
+}
+
+/* Format the tables to be zebra colored */
+th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: fit-content;
+  background-color: #9EC5AB;
+  color:#011502;
+  font-weight: bold;
+}
+
+tr:nth-child(even) td{
+  background-color: #104F55;
+}
+form * {
+  margin: auto;
+  text-align: center;
+}
+
+h1, h2 {
+  font-weight: 550;
+}
+
+/* Create the CSS grid layout */
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar; 
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+/* Format the navigation bar */
+.nav_bar {
+  grid-area: nav_bar;
+  display: flex; /* Uses Flexbox for internal layout */
+  justify-content: right;   /* Right aligns the content */
+}
+
+/* Format the read more read less buttons */
+.read {
+  color: #f5f5f7;
+  background-color: #32746D;
+  font-weight: 400;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  cursor: pointer;
+  margin-left: 5px;
+  
+}
+
+/* Format the checkout form*/
+#ticketForm {
+    display: none;
+    margin-top: 20px;
+}
+
+/* Format the mobile version of the website */
+@media only screen and (max-width: 650px) {
+  nav a {
+        display: block;
+  }
+
+  nav.nav_bar {
+    flex-direction: column;
+  }
+  nav.nav_bar a {
+    display: block;
+    margin: 8px 0;
+  }
+  table {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  #ticketForm {
+    width: 100%;
+  }
+  .read, .cta {
+    width: 100%;
+    text-align: center;
+    display: block;
+  }
+  .read {
+    color: #f5f5f7;
+    background-color: #011502;
+    font-weight: 400;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    cursor: pointer;
+  }
+
+  /* Show the hamburger only on the mobile version */
+  .hamburger {
+    display: block !important;
+    margin: 10px;
+    text-align: right;
+  }
+
+  .nav_bar {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    background-color: #011502;
+    padding: 10px 0;
+  }
+  .nav_bar.active {
+    display: flex;
+  }
+}
+
+/* Don't show the hamburger on desktop */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    background: none ;
+    border: none;
+    color: #f5f5f7;
+    cursor: pointer;
+}
+
+.hamburger.hidden {
+    display: none !important;
+}
+
+
+/* Format the height of the map */
+#map {  
+  height: 500px;}
+
+/* Format the interactive slideshow on the about page */
+.slideshow-container {
+    width: 50%;              /* Half the screen */
+    margin: 20px auto;       /* Center horizontally */
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.fade {
+    animation: fadeEffect 1.2s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Format the slideshow for mobile */
+@media only screen and (max-width: 650px) {
+    .slideshow-container {
+        width: 100%;
+    }
+}
+
+/* Format the previous and next buttons on the slideshow */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 10px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  user-select: none;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+  color: #9EC5AB;
+}
+
+/* Format the dots on the bottom of the screen to match the current slide */
+.dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 4px;
+  background-color: #104F55;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #9EC5AB;
+}

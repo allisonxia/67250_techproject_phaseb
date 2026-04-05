@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Allison Xia">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+</head>
+<body>
+    <div class="container"> 
+    <header class="header">
+        <img id= "logo" src="monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav_bar" id="mainNav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Tickets</a>
+    </nav>
+    <main class="main">
+    <div class="slideshow-container">
+    <div class="slide fade">
+        <img src="slide1.png" alt="A photo of the exterior of a modern museum called MonoMuse.">
+    </div>
+    <div class="slide fade">
+        <img src="slide2.jpg" alt="A photo of a music soundwave art exhibit.">
+    </div>
+
+    <div class="slide fade">
+        <img src="slide3.jpg" alt="A photo of a modern museum food court.">
+    </div>
+
+    <a class="prev">&#10094;</a>
+    <a class="next">&#10095;</a>
+
+    <div class="dots">
+        <span class="dot" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+    </div>
+    </div>
+    <p style="text-align: center">All images are AI generated with Microsoft Copilot.</p>
+    <h2>Mission Statement</h2>
+    <p>
+        MonoMuse believes that the relationship between science, art, and technology is 
+        always evolving. Our mission is to highlight the diverse voices and perspectives
+        that make up our constantly evolving society.
+    </p>
+    <br>
+    <h2>Who this Museum Serves</h2>
+    <p>
+        Innovators. Creators. Artists. Citizens. Adults. Families. Children. And anyone else interested in the intersection
+        of arts and technology!
+    </p>
+    <br>
+    <h2>Founding Year</h2>
+    <p>2015</p>
+    <br>
+    <h2>Milestones</h2>
+    <ul>
+        <li>2026: Integration with Carnegie Mellon University.</li>
+        <li>2023: Our founder graduates with a PhD.</li>
+        <li>2019: The museum opens its west wing exhibits.</li>
+    </ul>
+    <br>
+    <h2>Contact Us</h2>
+    <p>
+        <strong>Hours of Operation</strong>
+        <br>
+        Monday - Friday: 9am-6pm
+        <br>
+        Saturday - Sunday: 10am-8pm
+        <br>
+        <strong>Phone:</strong>
+        713-123-4567
+    </p>
+    <br>
+    <h2>Interested in supporting MonoMuse?</h2>
+    <p>Whether it's $10 or $100, your support means the world to us. Click the button below to help us
+        spread the joy of scientific wonder.
+    </p>
+    <button class="cta" onclick="donate()">Donate Now</button>
+    <p>Want to go a step further? Call us at 713-123-4567 to discuss our platinum membership circle.</p>
+    <br>
+    <h2>Where are we located?</h2>
+    <div id="map"></div>
+    </main>
+    <footer class="footer">
+        Copyright© <span id="copyYear"></span> MonoMuse. All rights reserved.
+    </footer>
+    </div>
+</body>
+</html>

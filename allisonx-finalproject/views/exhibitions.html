@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Allison Xia">
+    <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+    <meta name="description" content="MonoMuse website redesign project">
+    <title>MonoMuse</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="../static/script.js" defer></script>
+
+</head>
+<body>
+    <div class="container"> 
+    <header class="header">
+        <img id="logo" src="monomuselogo.png" alt="MonoMuse Museum Logo"> 
+    </header>
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <nav class="nav_bar" id="mainNav">
+        <a href="../index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="buytickets.html">Tickets</a>
+    </nav>
+    <main class="main">
+        <h1>Exhibition 1: Dreams in the Age of Androids</h1>
+        <p>
+            This exhibition explores how technology has influenced the everday person's dreams. This series of paintings
+            displays the unconscious through surrealistic and dream-like colors.
+        </p>
+        <h1>Exhibition 2: Music as Soundwaves</h1>
+        <p>
+            Taking a scientific approach to the art of music, this exhibition demonstrates just how soundwaves are emitted from
+            instruments and reach your ears.
+        </p>
+        <h2>How do we curate our art pieces?</h2>
+        <iframe src="https://www.youtube.com/embed/baDGE4oIpbg?si=jxbRZbVRXfTRGcU7" title="YouTube video player" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        <p>
+            Copyright© 2023 Contemporary Art Issue
+        </p>
+    </main>
+    <footer class="footer">
+        Copyright© <span id="copyYear"></span> MonoMuse. All rights reserved.
+    </footer>
+    </div>  
+</body>
+</html>
